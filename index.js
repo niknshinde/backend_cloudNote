@@ -3,7 +3,7 @@ const connectToMongoDb = require('./db')
 const express = require("express")
 var cors = require('cors')
 
-
+const port = 5000;
 connectToMongoDb();
 
 const app = express( );
@@ -19,5 +19,5 @@ app.use('/api/notes' , require('./routes/notes'))
 
 
 
-app.listen(5000,function(){
-console.log("server is running on port 3000")});
+app.listen(port,function(){
+console.log("server is running")});
